@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        
+        <title>Administrator</title>
+    </head>
+    <body>
+        <h2>Login ca administrator</h2>
+
+        <form action="verifica_conectare.php" method="post">
+            <label for="username">Nume de utilizator:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Parolă:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Conectare">
+        </form>
+
+        <form action="index.html" method="get">
+            <input type="submit" value="Înapoi">
+        </form>
+    </body>
+</html>

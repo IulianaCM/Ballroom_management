@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formular Meniu</title>
+    </head>
+
+    <body>
+        <h3>Informații despre meniu:</h3>
+
+        <form method="post" action="confirmare.php">
+            <input type="hidden" name="meniu">
+            <label>Denumire meniu:</label>
+            <input type="text" name="denumire" required><br>
+
+            <label>Tip de eveniment:</label>
+            <select name="tip_eveniment">
+                <option value="-">-</option>
+                <option value="Nunta">Nuntă</option>
+                <option value="Botez">Botez</option>
+                <option value="Bal absolvire">Bal de absolvire</option>
+            </select><br>
+
+            <label>Preț:</label>
+            <input type="text" name="pret" required><br>
+
+            <label>Gustare rece:</label>
+            <textarea name="gustare_rece" rows="4" cols="50"></textarea><br>
+
+            <label>Pește:</label>
+            <textarea name="peste" rows="4" cols="50"></textarea><br>
+
+            <label>Tradițional:</label>
+            <textarea name="traditional" rows="4" cols="50"></textarea><br>
+
+            <label>Grill:</label>
+            <textarea name="grill" rows="4" cols="50"></textarea><br>
+
+            <label>Tort:</label>
+            <input type="text" name="tort" required><br>
+
+            <label>Candy Bar:</label>
+            <select name="candy_bar">
+                <option value="-">-</option>
+                <option value="Da">Da</option>
+                <option value="Nu">Nu</option>
+            </select><br>
+
+            <label>Băuturi:</label>
+            <textarea name="bauturi" rows="4" cols="50"></textarea><br>
+
+            <input type="submit" value="Adaugă">
+        </form>
+    </body>
+</html>

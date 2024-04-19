@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <title>Ballroom</title>
+
+        <style>
+            form {
+                display: inline-block;
+                margin: 5px 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Bine ați venit pe site-ul nostru!</h1>
+        
+        <h3>Noi organizăm evenimentele visurilor dumneavoastră în locațiile noastre de vis.</h3>
+
+        <p>Dacă doriți rezervarea unei locații, modificarea sau ștergerea unei rezervări, folosiți butonul "Sunt client", apoi urmați pașii prezentați.</p>
+        <p>Pentru mentenanță, folosiți butonul "Login ca administrator".</p>
+
+        <form action="client_form.html" method="get">
+            <input type="submit" value="Sunt client">
+        </form>
+
+        <form action="admin_form.html" method="get">
+            <input type="submit" value="Login ca administrator">
+        </form>
+    </body>
+</html>

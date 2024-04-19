@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <title>Modificare</title>
+
+    <!-- Include orice alte resurse CSS sau JS necesare -->
+</head>
+<body>
+    <h2>Vă rugăm să introduceți următoarele date pentru identificare</h2>
+
+    <form action="cautare_client.php" method="post">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" name="nume" required><br>
+
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" name="prenume" required><br>
+
+        <label for="telefon">Număr de telefon:</label>
+        <input type="tel" id="telefon" name="telefon" required placeholder="Exemplu: 07xxxxxxxx" pattern="0[0-9]{9}"><br>
+
+        <input type="submit" value="Pasul următor">
+    </form>
+
+    <form action="client_form.html" method="get">
+        <input type="submit" value="Înapoi">
+    </form>
+</body>
+</html>

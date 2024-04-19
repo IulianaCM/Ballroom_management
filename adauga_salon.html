@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formular Salon</title>
+    </head>
+
+    <body>
+        <h3>Informații despre salon:</h3>
+
+        <form method="post" action="confirmare.php">
+            <input type="hidden" name="salon">
+            <label>Denumire salon:</label>
+            <input type="text" name="denumire" required><br>
+
+            <label>Descriere:</label>
+            <textarea name="descriere" rows="4" cols="50"></textarea><br>
+
+            <label>Număr de locuri:</label>
+            <input type="text" name="locuri" required><br>
+
+            <label>Costul închirierii:</label>
+            <input type="text" name="cost" required><br>
+
+            <input type="submit" value="Adaugă">
+        </form>
+    </body>
+</html>

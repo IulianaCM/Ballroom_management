@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <title>Rezervare</title>
+
+        <script src="rezervare.js"></script>
+    </head>
+    <body>
+        <h2>Introduceți următoarele date</h2>
+
+        <form action="procesare_rezervare.php" method="post">
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume" required><br>
+
+            <label for="prenume">Prenume:</label>
+            <input type="text" id="prenume" name="prenume" required><br>
+
+            <label for="telefon">Număr de telefon:</label>
+            <input type="tel" id="telefon" name="telefon" required placeholder="Exemplu: 07xxxxxxxx" pattern="0[0-9]{9}"><br>
+
+            <!-- Adaugă checkbox pentru preferința costului meniului -->
+            <label for="preferinta_cost_meniu">Aveți preferință pentru costul meniului?</label>
+            <input type="checkbox" id="preferinta_cost_meniu"><br>
+
+            <!-- Container pentru opțiunile afișate doar când este bifat checkbox-ul -->
+            <div id="preferinta_meniu_options" style="display: none;">
+                <label for="operator_meniu">Selectați comparator:</label>
+                <select id="operator_meniu">
+                    <option value="mai_mult_de">Mai mult de</option>
+                    <option value="mai_putin_de">Mai puțin de</option>
+                    <option value="egal_cu">Egal cu</option>
+                </select>
+
+                <label for="cost">Valoare pentru cost meniu:</label>
+                <input type="text" id="costMeniu">
+            </div><br>
+
+            <label for="tip_eveniment">Tip eveniment:</label>
+            <select id="tip_eveniment" name="tip_eveniment" required>
+                <option value="-">-</option>
+                <option value="Nunta">Nuntă</option>
+                <option value="Botez">Botez</option>
+                <option value="Bal absolvire">Bal de absolvire</option>
+            </select><br>
+
+            <div id="informatii-container"></div>
+
+            <label for="culoare">Culoarea predominantă pentru eveniment:</label>
+            <input type="text" id="culoare" name="culoare" required><br>
+
+            <!-- Adaugă checkbox pentru preferința la numărul de locuri -->
+            <label for="preferinta_locuri">Aveți preferință la numărul de locuri?</label>
+            <input type="checkbox" id="preferinta_locuri"><br>
+
+            <!-- Container pentru opțiunile afișate doar când este bifat checkbox-ul -->
+            <div id="preferinta_locuri_options" style="display: none;">
+                <label for="operator_locuri">Selectați comparator:</label>
+                <select id="operator_locuri">
+                    <option value="mai_mult_de">Mai mult de</option>
+                    <option value="mai_putin_de">Mai puțin de</option>
+                    <option value="egal_cu">Egal cu</option>
+                </select>
+
+                <label for="numar_locuri">Număr de locuri:</label>
+                <input type="text" id="numar_locuri">
+            </div><br>
+
+            <!-- Adaugă checkbox pentru preferința costului salonului -->
+            <label for="preferinta_cost">Aveți preferință pentru costul salonului?</label>
+            <input type="checkbox" id="preferinta_cost"><br>
+
+            <!-- Container pentru opțiunile afișate doar când este bifat checkbox-ul -->
+            <div id="preferinta_cost_options" style="display: none;">
+                <label for="operator_cost">Selectați comparator:</label>
+                <select id="operator_cost">
+                    <option value="mai_mult_de">Mai mult de</option>
+                    <option value="mai_putin_de">Mai puțin de</option>
+                    <option value="egal_cu">Egal cu</option>
+                </select>
+
+                <label for="cost">Valoare pentru cost:</label>
+                <input type="text" id="cost">
+            </div><br>
+
+            <!-- Adaugă checkbox pentru preferința costului fotografului -->
+            <label for="preferinta_cost_foto">Aveți preferință pentru costul serviciilor fotografului?</label>
+            <input type="checkbox" id="preferinta_cost_foto"><br>
+
+            <!-- Container pentru opțiunile afișate doar când este bifat checkbox-ul -->
+            <div id="preferinta_foto_options" style="display: none;">
+                <label for="operator_foto">Selectați comparator:</label>
+                <select id="operator_foto">
+                    <option value="mai_mult_de">Mai mult de</option>
+                    <option value="mai_putin_de">Mai puțin de</option>
+                    <option value="egal_cu">Egal cu</option>
+                </select>
+
+                <label for="foto">Valoare pentru tariful fotografului:</label>
+                <input type="text" id="foto">
+            </div><br>
+
+            <label for="data_eveniment">Data evenimentului:</label>
+            <input type="date" id="data_eveniment" name="data_eveniment" required><br>
+
+            <label for="ora_incepere">Ora de începere:</label>
+            <input type="time" id="ora_incepere" name="ora_incepere" required><br>
+
+            <div id="informatii-container-1"></div>
+
+            <div id="informatii-container-2"></div>
+
+            <input type="submit" value="Rezervă">
+        </form>
+
+        <form action="client_form.html" method="get">
+            <input type="submit" value="Înapoi">
+        </form>
+    </body>
+</html>

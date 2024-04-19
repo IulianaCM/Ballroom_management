@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <title>Client</title>
+
+        <script src="client_form.js"></script>
+
+        <style>
+            form {
+                display: inline-block;
+                margin: 5px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Aici puteți vedea ofertele noastre în privința sălilor pe care le deținem, fotografii parteneri și meniurile pe care le pregătim în funcție de eveniment.</h3>
+
+        <label for="preferinte">Alegeți ce doriți să vizualizați:</label>
+        <select id="preferinte" onchange="afiseazaInformatii()">
+            <option value="-">-</option>
+            <option value="Salon">Saloane</option>
+            <option value="Fotograf">Fotografi</option>
+            <option value="Meniu">Meniuri</option>
+        </select>
+
+        <!-- Adaugă dropdown-ul pentru tipul meniului -->
+        <label id="tip_meniu_label" for="tip_meniu" style="display: none;">Alegeți tipul de eveniment:</label>
+        <select id="tip_meniu" style="display: none;">
+            <option value="-">-</option>
+            <option value="Nunta">Nuntă</option>
+            <option value="Botez">Botez</option>
+            <option value="Bal absolvire">Bal de absolvire</option>
+        </select>
+
+        <!-- Adaugă elementul pentru afișarea rezultatelor din query -->
+        <div id="informatii-container"></div>
+
+        <h4>Folosind butoanele de mai jos veți putea realiza în continuare rezervarea pentru evenimentul dumneavoastră sau, dacă ați făcut deja o rezervare, să o modificați sau să o ștergeți.</h4>
+
+        <form action="rezervare.html" method="get">
+            <input type="submit" value="Doresc o rezervare">
+        </form>
+
+        <form action="modificare.html" method="get">
+            <input type="submit" value="Modifică/Șterge rezervare existentă">
+        </form>
+
+        <form action="index.html" method="get">
+            <input type="submit" value="Înapoi">
+        </form>
+    </body>
+</html>
